@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="userRegister.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="bg">
+        <img src="img/login.jpg" alt="login" class="bg">
+    </div>
+    <header>
+        <div class="ls">
+            <div class="lss">
+                <div class="logo">
+                    <h1 class="h1">EverHeal</h1>
+                </div>
+                <div class="docserch">
+                    <input type="search" name="" placeholder=" " class="docsrch">
+                    <button class="docbtn">Search</button>
+                </div>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="FindDoctor.html">Find Doctor</a></li>
+                    <li><a href="FindHospital.html">Find Hospital</a></li>
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Your Query</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="signup">
+        <h1>Sign in</h1>
+        <div class="content">
+            <form action="Signin.php" method="post">
+                <div class="imp1">
+                    <div class="input-wrapper">
+                        <input type="text" id="firstName" name="firstName" placeholder=" " class="input" required>
+                        <label for="firstName">First Name:</label>
+                    </div>
+                    <!-- <div class="input-wrapper">
+                        <input type="text" id="secondName" name="secondName" placeholder=" " class="input">
+                        <label for="secondName">Second Name:</label>
+                    </div> -->
+                    <div class="input-wrapper">
+                        <input type="text" id="surName" name="surName" placeholder=" " class="input" required>
+                        <label for="surName">Surname:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder=" " class="input" required>
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="phone" name="phone" placeholder=" " class="input" required>
+                        <label for="phone">Phone Number:</label>
+                    </div>
+                </div>
+
+                <div class="imp2">
+                    <div class="input-wrapper">
+                        <input type="text" id="country" name="country" placeholder=" " class="input" required>
+                        <label for="country">Country:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="state" name="state" placeholder=" " class="input" required>
+                        <label for="state">State:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="city" name="city" placeholder=" " class="input" required>
+                        <label for="city">City:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="number" id="pincode" name="pincode" placeholder=" " class="input" required>
+                        <label for="pincode">Pincode:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea id="address" name="address" placeholder=" " class="input" required></textarea>
+                        <label for="address">Address:</label>
+                    </div>
+                </div>
+
+                <div class="imp3">
+                    <div class="input-wrapper">
+                        <input type="text" id="gender" name="gender" placeholder=" " class="input" required>
+                        <label for="gender">Select Gender:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="date" id="dob" name="dob" placeholder=" " class="input" required>
+                        <h4 for="dob" class="dobb">Date of Birth:</h4>
+                    </div>
+                    <div class="input-wrapper">
+                        <select id="blood-group" name="blood-group" required>
+                            <option value="A+" selected disabled hidden>Select your Blood group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <!-- <label for="blood-group">Select Your Blood Group:</label> -->
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="height" name="height" placeholder=" " class="input" required>
+                        <label for="height">Height:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="weight" name="weight" placeholder=" " class="input" required>
+                        <label for="weight">Weight:</label>
+                    </div>
+                </div>
+                
+                <div class="imp4">
+                    <div class="input-wrapper">
+                        <select id="qualifications" name="qualifications" required>
+                            <option value="none" selected disabled hidden>Choose your Qualifications</option>
+                            <option value="mbbs">MBBS</option>
+                            <option value="md">MD</option>
+                            <option value="ms">MS</option>
+                            <option value="mch">MCh</option>
+                            <option value="dnb">DNB</option>
+                            <option value="dm">DM</option>
+                            <option value="bds">BDS</option>
+                            <option value="mds">MDS</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <!-- <label for="qualifications">Qualifications:</label> -->
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="file" id="photo" name="photo" accept="image/*" required>
+                        <h4 class="uyp" for="photo">Upload Your Photograph:</h4>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="file" id="idProof" name="idProof" accept="image/*" required>
+                        <h4 class="uyp" for="idProof">Upload Your ID Proof:</h4>
+                    </div>
+                </div>
+                
+                <div class="imp5">
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" placeholder=" " class="input" required>
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" placeholder=" " class="input" required>
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" id="cpassword" name="cpassword" placeholder=" " class="input" required>
+                        <label for="cpassword">Confirm Password:</label>
+                    </div>
+                </div>                
+                <div class="imp6">    
+                    <div class="input-wrapper">
+                        <select name="other">
+                            <option value="none" selected disabled hidden>Choose if you have something other than given in form</option>
+                            <option value="Name">Name</option>
+                            <option value="Email">Email</option>
+                            <option value="Address">Address</option>
+                            <option value="bloodGroup">Blood Group</option>
+                            <option value="Qualifications">Qualifications</option>
+                            <option value="Photos">Photos</option>
+                            <option value="Username or Password">Username or Password</option>
+                        </select>
+                        <!-- <label for="other-things">If you have something other than given in form, type here:</label> -->
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea id="other-things-input" name="other-things" placeholder="Additional Information write here... "></textarea>
+                        <!-- <label for="other-things-input"></label> -->
+                    </div>
+                    <input type="submit" value="Submit" class="submitBtn">
+                </div>    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

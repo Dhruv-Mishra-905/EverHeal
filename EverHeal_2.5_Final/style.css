@@ -1,0 +1,1723 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(135deg, rgb(147,197,253),rgb(110,231,183), rgb(211,234,244));
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    width: 98vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+    border-radius: .5vw;
+    font-size: 1.5vw;
+}
+.logo{
+    width: 18vw;
+    height: 250%;
+    overflow: hidden;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.navList ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.navList ul li{
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.navList ul li:hover{
+    color: rgb(19,51,91);
+    transition: all .3s ease-in-out;
+}
+.navList ul li a{
+    color: rgb(19,51,91);
+}
+.navList ul li a:hover{
+    color: rgb(19,51,91);
+    transition: all .3s ease-in-out;
+}
+.navList ul li a.active{
+    color: rgb(19,51,91);
+    font-weight: bold;
+}
+.navList ul li a.active:hover{
+    color: rgb(19,51,91);
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.account{
+    display: flex;
+    gap: 3vw;
+}
+.account a{
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19,51,91);
+}
+.account a:hover{
+    color: rgb(19,51,91);
+    transition: all .3s ease-in-out;
+}
+.account a.active{
+    color: rgb(19,51,91);
+    font-weight: bold;
+}
+.account a.active:hover{
+    color: rgb(19,51,91);
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+.heading{
+    margin: 5.5vw;
+}
+.heading h1{
+    font-size: 4vw;
+    margin: 1.5vw;
+    font-family: cursive;
+    color: rgb(19,51,91);
+}
+.heading h3{
+    font-size: 1.5vw;
+    margin: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19,51,91);
+}
+.quick{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 2vw;
+    margin-left: 6vw;
+}
+.container{
+    width: 25vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.sp{
+    gap: 2.5vw;
+}
+.container:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease-in-out;
+}
+.container .img{
+    width: 15%;
+    height: 70%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5vw;
+}
+.container a{
+    font-size: 1.5vw;
+}
+.appointments{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 2vw;
+    margin-left: 6vw;
+}
+.appointments .container{
+    width: 25vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.appointments .container:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease-in-out;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25vw;
+    padding: 1vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+}
+
+.date h3 {
+    font-size: 1.5vw;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.date h3 span {
+    display: block;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+}
+
+.card-content span {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.card-content small {
+    font-size: 1vw;
+    color: rgb(100, 100, 100);
+}
+
+.card-button input[type="button"] {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.card-button input[type="button"]:hover {
+    background-color: rgb(15, 40, 70);
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vw auto;
+    text-align: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+
+.heading i {
+    font-size: 3vw;
+    color: rgb(19, 51, 91);
+    margin-bottom: 1vw;
+    transition: color 0.3s ease-in-out;
+}
+
+.heading i:hover {
+    color: rgb(15, 40, 70);
+}
+
+.heading h1 {
+    font-size: 4vw;
+    font-family: cursive;
+    color: rgb(19, 51, 91);
+    margin: 1vw 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.heading h1:hover {
+    color: rgb(15, 40, 70);
+}
+
+.heading h3 {
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.heading h3:hover {
+    color: rgb(15, 40, 70);
+}
+.view-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2vw 0 4vw 0;
+}
+
+.view-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    padding: 1.5vw 2.5vw;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgb(19, 51, 91), rgb(28, 80, 140));
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.status {
+    margin-top: 0.5vw;
+    padding: 0.4vw 1vw;
+    border-radius: 50px; /* oval shape */
+    font-size: 1vw;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.status.online {
+    background-color: rgb(34, 139, 34); /* green */
+    box-shadow: 0 0 8px rgba(34, 139, 34, 0.5);
+}
+
+.status.offline {
+    background-color: rgb(19, 51, 91); /* theme dark blue */
+    box-shadow: 0 0 8px rgba(19, 51, 91, 0.5);
+}
+
+.status i {
+    font-size: 1.2vw;
+}
+/* Add more breathing room inside each card */
+.card {
+    display: flex;
+    align-items: flex-start; /* top align instead of center */
+    justify-content: space-between;
+    width: 25vw;
+    padding: 1.5vw; /* slightly bigger padding */
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+    gap: 1vw; /* space between date, content, button */
+}
+
+/* Space out inside the content column */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;   /* ⬅ added more space between name, time, address, status */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+}
+
+/* Make doctor name stand out more */
+.card-content span {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 0.3vw;
+}
+
+/* Address + time */
+.card-content small {
+    font-size: 1vw;
+    color: rgb(100, 100, 100);
+    line-height: 1.4;
+}
+
+/* Status badge already oval — just give it breathing space */
+.status {
+    /* margin-top: 0.5vw; */
+    margin-left: 2vw;
+    padding: 0.5vw 1vw;  /* a bit more padding */
+    border-radius: 50px;
+    font-size: 0.9vw;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#view-more-appointment {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    padding: 1.5vw 2.5vw;   
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgb(19, 51, 91), rgb(28, 80, 140));
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.view-more-btn i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+    background: linear-gradient(135deg, rgb(15, 40, 70), rgb(20, 70, 120));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.view-more-btn:hover i {
+    transform: translateX(6px);
+}
+
+
+
+
+    /* Modal background */
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5); /* Black with opacity */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from top, centered */
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Inputs styling */
+.modal-content input[type="date"],
+.modal-content input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 16px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button */
+#submit-reschedule {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#submit-reschedule:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+.search {
+    width: 40%;
+    padding: 1vw;
+    font-size: 1.5vw;
+    margin: 1vw auto;
+    display: block;
+    border: 2px solid rgb(19, 51, 91);
+    border-radius: .5vw;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.search:focus {
+    border-color: rgb(15, 40, 70);
+    box-shadow: 0 0 10px rgba(15, 40, 70, 0.5);
+}
+
+.hospital-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2vw auto;
+}
+
+.hospital-card {
+    width: 25vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.hospital-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hospital-name h3, .hospital-location h4, .hospital-bed h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+}
+
+.hospital-button input[type="button"] {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.doctor-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    margin: 3vw auto;
+}
+
+.doctor-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.doctor-card {
+    width: 25vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.doctor-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.doctor-img img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-card:hover .doctor-img img {
+    transform: scale(1.1);
+}
+
+.doctor-name h3, .doctor-profession h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.doctor-card:hover .doctor-name h3, .doctor-card:hover .doctor-profession h4 {
+    color: rgb(15, 40, 70);
+}
+
+.doctor-button input[type="button"] {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.doctor-button input[type="button"]:hover {
+    background-color: rgb(15, 40, 70);
+}
+
+
+
+
+.pharmacy-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2vw auto;
+}
+
+.pharmacy-card {
+    width: 25vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.pharmacy-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.pharmacy-name h3, .pharmacy-location h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+}
+
+.pharmacy-button input[type="button"] {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.pharmacy-button input[type="button"]:hover {
+    background-color: rgb(15, 40, 70);
+}
+
+
+
+.bloodbank-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2vw auto;
+}
+
+.bloodbank-card {
+    width: 25vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.bloodbank-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.bloodbank-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bloodbank-card:hover .bloodbank-image img {
+    transform: scale(1.05);
+}
+
+.bloodbank-name h3, .bloodbank-location h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.bloodbank-card:hover .bloodbank-name h3,
+.bloodbank-card:hover .bloodbank-location h4 {
+    color: rgb(15, 40, 70);
+}
+
+.bloodbank-button input[type="button"] {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.bloodbank-button input[type="button"]:hover {
+    background-color: rgb(15, 40, 70);
+}
+
+
+
+
+.featu {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2vw auto;
+}
+
+.feature-card {
+    width: 30vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.feature-img img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1vw;
+}
+
+.feature-content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(19, 51, 91);
+    font-size: 1.5vw;
+}
+
+.feature-content span {
+    display: block;
+    font-size: 1vw;
+    color: rgba(19, 51, 91, 0.7);
+    margin-top: 0.5vw;
+}
+
+.feature-content a {
+    display: inline-block;
+    margin-top: 1vw;
+    font-size: 1vw;
+    color: rgb(19, 51, 91);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.feature-content a:hover {
+    color: rgb(15, 40, 70);
+}
+.review-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin: 2vw auto;
+}
+
+.review-card {
+    width: 30vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.review-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.review-content p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vw;
+    color: rgb(19, 51, 91);
+    margin: 0.5vw 0;
+}
+
+.review-author h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2vw;
+    color: rgba(19, 51, 91, 0.8);
+    margin: 0.5vw 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.review-card:hover .review-author h4 {
+    color: rgb(15, 40, 70);
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin: 3vw auto;
+}
+
+.news-card {
+    width: 30vw;
+    padding: 1.5vw;
+    border-radius: .5vw;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.news-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.news-img img {
+    width: 100%;
+    height: auto;
+    border-radius: .5vw;
+}
+
+.news-content h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vw;
+    color: rgb(19, 51, 91);
+    margin: 0 0 1vw 0;
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 2vw;
+}
+
+.news-content h3:hover {
+    color: rgb(15, 40, 70);
+}
+
+.news-content p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2vw;
+    color: rgba(19, 51, 91, 0.8);
+    margin: 1vw 0 0 0 ;
+}
+.learn-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgba(19, 51, 91, 0.8);
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.learn-more-link:hover {
+    color: rgb(15, 40, 70);
+}
+footer {
+    background-color: rgb(19, 51, 91);
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-top: 4px solid rgb(19, 51, 91);
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6vw;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-container div {
+    flex: 1 1 220px;
+    min-width: 220px;
+  }
+  
+  .footer-brand h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-container h3:hover {
+    color: #fff;
+  }
+  
+  .footer-container p,
+  .footer-container li,
+  .footer-bottom p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+  }
+  
+  .footer-links ul,
+  .footer-credits ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li,
+  .footer-credits li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color:#fff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccd9e6;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #fff;
+  }
+  a {
+    position: relative;
+    transition: color 0.4s ease;
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: rgb(15, 40, 70);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  a:hover {
+    color: rgb(15, 40, 70);
+  }
+  
+  a:hover::after {
+    transform: scaleX(1);
+  }
+  .animate {
+    opacity: 1;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .animate:not(.visible) {
+    transform: scale(0.9) translateY(20px);
+  }
+  .animate[data-direction="up"]:not(.visible) {
+    transform: scale(0.9) translateY(-20px);
+  }
+  .animate.visible {
+    transform: scale(1) translateY(0);
+  }
+.rating{
+    margin: 1vw;
+}
+.pharmacy-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.pharmacy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pharmacy-image:hover img {
+    transform: scale(1.1);
+}
+
+.hospital-image.animate img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.hospital-image.animate:hover img {
+    transform: scale(1.1);
+}
+.hospital-image.animate img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.hospital-image.animate {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hospital-image.animate:hover img {
+    transform: scale(1.1);
+}
+.review-image.animate img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+}
+
+.review-card.animate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 43vw;
+}
+
+.review-card.animate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-content.animate {
+    flex: 1;
+}
+
+.review-author.animate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.rating.animate i {
+    color: #ff9800;
+    cursor: pointer;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin: 2vw auto;
+    width: 60%;
+}
+
+.search-container .search {
+    flex: 1;
+    padding: 1.5vw;
+    font-size: 1.5vw;
+    border: 2px solid rgb(19, 51, 91);
+    border-radius: .5vw;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+}
+
+.search-container .search:focus {
+    border-color: rgb(15, 40, 70);
+    box-shadow: 0 0 10px rgba(15, 40, 70, 0.5);
+}
+
+.search-container .search-button {
+    padding: 1.8vw 3vw;
+    font-size: 3.5vw;
+    color: white;
+    background-color: rgb(19, 51, 91);
+    border: none;
+    border-radius: .5vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 4.5vw;
+}
+
+.search-container .search-button:hover {
+    background-color: rgb(15, 40, 70);
+}
+
+.search-container .search-button i {
+    font-size: 1.5vw;
+}
+.news-section {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .news-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .news-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  .news-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    align-self: stretch;
+  }
+  
+  .news-card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  .news-card a {
+    text-decoration: none;
+    color: rgb(19, 51, 91);
+    font-weight: bold;
+    margin-top: auto;
+    padding: 0 2vw;
+  }
+  
+  .awards {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .awards h2 {
+    font-size: 24px;
+    margin-bottom: 1vw;
+  }
+  
+  .awards ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .awards li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .Additional-features {
+    padding: 40px 20px;
+  }
+  .Additional-features .featu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+  .feature-card {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(253, 244, 244, 0.95), rgba(195, 208, 214, 0.9), rgba(225, 248, 233, 0.9));
+    border-radius: 8px;
+  }
+  .feature-icon {
+    margin-bottom: 15px;
+  }
+  .feature-content {
+    text-align: center;
+  }
+  .feature-content span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  .feature-content a {
+    margin-top: 12px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+@media screen and (max-width: 768px) {
+    
+    header {
+        gap: 6vw;
+        height: auto;
+        display: flex;
+    }
+
+    .navList ul {
+        display: none;
+    }
+
+    .navList ul li {
+        font-size: 8vw;
+        padding: 6vw;
+    }
+
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+
+    .account {
+        /* flex-direction: column; */
+        gap: 5vw;
+    }
+
+    .account a {
+        font-size: 6vw;
+    }
+    .heading h1 {
+        font-size: 8vw;
+    }
+
+    .heading h3 {
+        font-size: 3vw;
+    }
+
+    .search-container .search {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    .search-container .search-button {
+        font-size: 5vw;
+        padding: 2.5vw 4vw;
+    }
+
+    .quick{
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .quick a{
+        font-size: 5vw;
+    }
+    .container{
+        border-radius: 5vw;
+    }
+    .news-card h3 {
+        font-size: 4vw;
+    }
+
+    .news-card p {
+        font-size: 2vw;
+    }
+
+    .feature-card {
+        width: 80%;
+    }
+
+    .feature-content span {
+        font-size: 1.5rem;
+    }
+
+    .feature-content a {
+        font-size: 1.5rem;
+    }
+
+    .doctor-card, .pharmacy-card, .hospital-card {
+        width: 80%;
+    }
+
+    .doctor-name h3, .doctor-profession h4, .pharmacy-name h3, .pharmacy-location h4, .hospital-name h3, .hospital-location h4 {
+        font-size: 3vw;
+    }
+
+    .doctor-button input[type="button"], .pharmacy-button input[type="button"], .hospital-button input[type="button"] {
+        font-size: 3vw;
+        padding: 1vw 2vw;
+    }
+    .featu {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .review-card.animate {
+        width: 75%;
+        flex-direction: column;
+    }
+
+    .news-cards {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .news-card {
+        width: 90%;
+    }
+
+    .awards h2 {
+        font-size: 5vw;
+    }
+
+    .awards li {
+        font-size: 3vw;
+    }
+    .quick {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+
+    .quick .container {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        padding: 2vw;
+        font-size: 2vw;
+    }
+    .quick .container .img img {
+        width: 150%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .quick .container .img img:hover {
+        transform: scale(1.1);
+    }
+    .appointment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 3vw;
+        padding: 5vw;
+    }
+
+    .appointment .heading h1 {
+        font-size: 8vw;
+    }
+
+    .appointment .heading h3 {
+        font-size: 4vw;
+    }
+
+    .appointments {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+        width: 100%;
+    }
+
+    .appointments .card {
+        width: 90%;
+        padding: 3vw;
+        font-size: 3vw;
+    }
+
+    .appointments .card .date h3 {
+        font-size: 4vw;
+    }
+
+    .appointments .card .date h3 span {
+        font-size: 6vw;
+    }
+
+    .appointments .card .card-content span {
+        font-size: 3vw;
+    }
+
+    .appointments .card .card-button input[type="button"] {
+        font-size: 2.5vw;
+        padding: 1vw 2vw;
+    }
+    
+    .search-container input{
+        width: 40vw;
+        height: 5vw;
+    }
+    .search-container .search-button {
+        padding: 4vw 5vw;
+        right: 3vw;
+    }
+    .search-container .search-button i{
+        font-size: 2vw;
+    }
+    .view-more-btn{
+        padding: 4vw 5vw;
+        font-size: 2vw;
+    }
+    
+    .card-content small{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        font-size: 3vw;
+    }
+    .card-content small i{
+        margin: .5vw;
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
+    }
+    .status{
+        width: 15vw;
+        font-size: 2vw;
+    }
+    .feature-content{
+        font-size: 2.5vw;
+    }
+    .review-content p{
+        font-size: 2.5vw;
+    }
+    .review-author h4{
+        font-size: 2vw;
+    }
+
+
+    .bloodbank-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+}
+
+.bloodbank-card {
+    width: 80%;
+    padding: 3vw;
+    font-size: 3vw;
+}
+
+.bloodbank-image img {
+    width: 80%;
+    height: auto;
+}
+
+.bloodbank-name h3,
+.bloodbank-location h4 {
+    font-size: 3vw;
+}
+
+.bloodbank-button input[type="button"] {
+    font-size: 3vw;
+    padding: 1vw 2vw;
+}
+}
+
+/* Doctor Cards */
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.doctor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+.doctor-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.doctor-name h3 {
+  margin: 10px 0 5px;
+  color: #123b6d;
+}
+.doctor-profession h4, .doctor-location h4 {
+  margin: 5px 0;
+  color: #444;
+  font-size: 14px;
+}
+.rating {
+  color: #f4b400;
+  margin: 8px 0;
+}
+.doctor-button input {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.doctor-button input:hover {
+  background: #1f4b8e;
+}
+
+
+
+/* Popup Styles */
+    #appointment-popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #appointment-popup.active {
+      display: flex;
+    }
+
+    .popup-content {
+      background: white;
+      border-radius: 10px;
+      width: 500px;
+      max-width: 90vw;
+      padding: 20px 30px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .popup-content h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #333;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      font-size: 1.5rem;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    #appointment-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    #appointment-form input[type="text"],
+    #appointment-form input[type="number"],
+    #appointment-form input[type="email"],
+    #appointment-form select,
+    #appointment-form input[type="time"],
+    #appointment-form input[type="date"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    #appointment-form select {
+      cursor: pointer;
+    }
+
+    .form-row {
+      margin-bottom: 15px;
+    }
+
+    .form-row.inline {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row.inline > div {
+      flex: 1;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 5px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    #appointment-form button[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #appointment-form button[type="submit"]:hover {
+      background-color: #218838;
+    }
+      #booking-form input {
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+  }
+  #booking-form button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  #booking-form button:hover {
+    background: #0056b3;
+  }
+  #booking-message {
+    font-weight: 600;
+    color: green;
+  }

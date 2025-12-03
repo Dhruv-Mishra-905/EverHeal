@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EverHeal Help/FAQ</title>
+  <!-- Include Font Awesome for header icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset & base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, rgb(147, 197, 253), rgb(110, 231, 183), rgb(211, 234, 244));
+
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 98vw;
+      height: 6vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20vw;
+      border-radius: .5vw;
+      font-size: 1.5vw;
+    }
+
+    .logo {
+      width: 18vw;
+      height: 250%;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10vw;
+    }
+
+    ul li {
+      font-size: 1.5vw;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    ul li:hover {
+      color: rgb(19, 51, 91);
+      transition: all .3s ease-in-out;
+    }
+
+    ul li a {
+      color: rgb(19, 51, 91);
+    }
+
+    ul li a:hover {
+      color: rgb(19, 51, 91);
+      transition: all .3s ease-in-out;
+    }
+
+    ul li a.active {
+      color: rgb(19, 51, 91);
+      font-weight: bold;
+    }
+
+    ul li a.active:hover {
+      color: rgb(19, 51, 91);
+      font-weight: bold;
+      transition: all .3s ease-in-out;
+    }
+
+    .account {
+      display: flex;
+      gap: 3vw;
+    }
+
+    .account a {
+      font-size: 1.5vw;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(19, 51, 91);
+    }
+
+    .account a:hover {
+      color: rgb(19, 51, 91);
+      transition: all .3s ease-in-out;
+    }
+
+    .account a.active {
+      color: rgb(19, 51, 91);
+      font-weight: bold;
+    }
+
+    .account a.active:hover {
+      color: rgb(19, 51, 91);
+      font-weight: bold;
+      transition: all .3s ease-in-out;
+    }
+
+    .search-bar {
+      display: flex;
+      max-width: 480px;
+      margin: 0 auto 2rem;
+    }
+
+    .search-bar input[type="search"] {
+      flex-grow: 1;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-right: none;
+      border-radius: 30px 0 0 30px;
+      outline-offset: 2px;
+      transition: border-color 0.3s ease;
+    }
+
+    .search-bar input[type="search"]:focus {
+      border-color: #2a9d8f;
+    }
+
+    .search-bar button {
+      background-color: #2a9d8f;
+      border: 2px solid #2a9d8f;
+      border-radius: 0 30px 30px 0;
+      padding: 0 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .search-bar button:hover,
+    .search-bar button:focus {
+      background-color: #21867a;
+      border-color: #21867a;
+    }
+
+    .search-bar button svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq-question {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 1rem 1.25rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      color: #2a9d8f;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover,
+    .faq-question:focus {
+      background-color: #e0f2f1;
+      outline: none;
+    }
+
+    .faq-question::after {
+      content: "";
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border-style: solid;
+      border-width: 2px 2px 0 0;
+      border-color: #2a9d8f;
+      transform: translateY(-50%) rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: translateY(-50%) rotate(135deg);
+    }
+
+    .faq-answer-wrapper {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.active .faq-answer-wrapper {
+      max-height: 500px;
+      /* large enough for content */
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1rem 1.25rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    /* Help Topics Grid */
+    .help-topics {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 900px) {
+      .help-topics {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 899px) {
+      .help-topics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .help-topics {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .help-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: default;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .help-card:hover,
+    .help-card:focus-within {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .help-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      fill: #2a9d8f;
+    }
+
+    .help-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2a9d8f;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      nav li {
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="img/logo.png" alt="Everheal Logo"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="medical.html">Store</a></li>
+      </ul>
+    </nav>
+    <div class="account">
+      <a href="help.html">Help</a>
+      <a href="login.html" target="_blank"><i class="fa fa-user"></i></a>
+    </div>
+  </header>
+
+  <section class="help-section" aria-label="Help and Frequently Asked Questions">
+
+    <form class="search-bar" role="search" aria-label="Search questions">
+      <input type="search" id="faq-search" name="faq-search" placeholder="Search your question..."
+        aria-label="Search your question" autocomplete="off" />
+      <button type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.48-5.34C15.07 5.59 12.48 3 9.25 3S3.43 5.59 3.43 8.39c0 2.8 2.59 5.39 5.82 5.39a6.471 6.471 0 005.34-1.48l.27.28v.79l4.25 4.25c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L15.5 14zm-6.25 0c-1.93 0-3.5-1.57-3.5-3.5S7.32 7 9.25 7s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+        </svg>
+      </button>
+    </form>
+
+    <div class="faq-list" id="faq-list" role="list" aria-label="Frequently Asked Questions">
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1_desc" id="faq1">
+          How to book a hospital bed?
+        </button>
+        <div class="faq-answer-wrapper" id="faq1_desc" role="region" aria-labelledby="faq1" hidden>
+          <p class="faq-answer">
+            To book a hospital bed, log in to your EverHeal account, navigate to the "Booking Beds" section, select your
+            preferred hospital and bed type, and confirm your booking with payment options available.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2_desc" id="faq2">
+          How to find the best doctor?
+        </button>
+        <div class="faq-answer-wrapper" id="faq2_desc" role="region" aria-labelledby="faq2" hidden>
+          <p class="faq-answer">
+            Use the "Find Doctors" feature to filter by specialty, location, ratings, and availability. You can also
+            read patient reviews and book consultations directly through EverHeal.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3_desc" id="faq3">
+          How do I upload my health reports?
+        </button>
+        <div class="faq-answer-wrapper" id="faq3_desc" role="region" aria-labelledby="faq3" hidden>
+          <p class="faq-answer">
+            Go to "Upload Health Records" in your profile, choose the files from your device, and upload them securely.
+            Supported formats include PDF, JPG, and PNG.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq4_desc" id="faq4">
+          Can I book an online consultation?
+        </button>
+        <div class="faq-answer-wrapper" id="faq4_desc" role="region" aria-labelledby="faq4" hidden>
+          <p class="faq-answer">
+            Yes, EverHeal offers online consultations. Select "Online Consultation," choose your doctor, pick a time
+            slot, and complete the booking with payment.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq5_desc" id="faq5">
+          What to do in emergency cases?
+        </button>
+        <div class="faq-answer-wrapper" id="faq5_desc" role="region" aria-labelledby="faq5" hidden>
+          <p class="faq-answer">
+            In emergencies, immediately call your local emergency number. You can also use EverHeal's "Emergency Help"
+            feature to find the nearest hospital or request urgent assistance.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq6_desc" id="faq6">
+          How to reset my account password?
+        </button>
+        <div class="faq-answer-wrapper" id="faq6_desc" role="region" aria-labelledby="faq6" hidden>
+          <p class="faq-answer">
+            Click on "Forgot Password" on the login page, enter your registered email, and follow the instructions sent
+            to your email to reset your password securely.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <section class="help-topics" aria-label="Help Topics">
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false" aria-label="Booking Beds help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M20 7h-1V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3H4a1 1 0 0 0-1 1v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-1-1zm-9-2h4v2h-4V5zm9 11H5v-7h14v7z" />
+        </svg>
+        <div class="help-text">Booking Beds</div>
+      </article>
+
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false" aria-label="Find Doctors help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+        </svg>
+        <div class="help-text">Find Doctors</div>
+      </article>
+
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Upload Health Records help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-7V3.5L18.5 9H13z" />
+        </svg>
+        <div class="help-text">Upload Health Records</div>
+      </article>
+
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Online Consultation help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 6h-2v7H6v2h12a1 1 0 0 0 1-1V6zM4 6H2v12a2 2 0 0 0 2 2h12v-2H4V6z" />
+        </svg>
+        <div class="help-text">Online Consultation</div>
+      </article>
+
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false" aria-label="Emergency Help help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z" />
+        </svg>
+        <div class="help-text">Emergency Help</div>
+      </article>
+
+      <article class="help-card" tabindex="0" role="button" aria-pressed="false"
+        aria-label="Account Settings help topic">
+        <svg class="help-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 8a4 4 0 1 0 4 4 4.005 4.005 0 0 0-4-4zm0 10c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
+        </svg>
+        <div class="help-text">Account Settings</div>
+      </article>
+    </section>
+
+  </section>
+
+  <script>
+    (function () {
+      const faqList = document.getElementById('faq-list');
+      const faqItems = faqList.querySelectorAll('.faq-item');
+      const searchForm = document.querySelector('.search-bar');
+      const searchInput = searchForm.querySelector('input[type="search"]');
+
+      // Accordion toggle function
+      function toggleFaqItem(clickedItem) {
+        faqItems.forEach(item => {
+          const questionBtn = item.querySelector('.faq-question');
+          const answerWrapper = item.querySelector('.faq-answer-wrapper');
+          const isActive = item === clickedItem;
+
+          if (isActive) {
+            const expanded = questionBtn.getAttribute('aria-expanded') === 'true';
+            if (expanded) {
+              // Close it
+              questionBtn.setAttribute('aria-expanded', 'false');
+              answerWrapper.hidden = true;
+              item.classList.remove('active');
+            } else {
+              // Open it
+              questionBtn.setAttribute('aria-expanded', 'true');
+              answerWrapper.hidden = false;
+              item.classList.add('active');
+            }
+          } else {
+            // Close others
+            questionBtn.setAttribute('aria-expanded', 'false');
+            answerWrapper.hidden = true;
+            item.classList.remove('active');
+          }
+        });
+      }
+
+      // Attach click event to each question button
+      faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        questionBtn.addEventListener('click', () => {
+          toggleFaqItem(item);
+        });
+        questionBtn.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFaqItem(item);
+          }
+        });
+      });
+
+      // Search functionality: filter FAQs by question text
+      searchForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          // Show all
+          faqItems.forEach(item => {
+            item.style.display = '';
+          });
+          return;
+        }
+        faqItems.forEach(item => {
+          const questionText = item.querySelector('.faq-question').textContent.toLowerCase();
+          if (questionText.includes(query)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+
+      // Optional: live search filtering as user types
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim().toLowerCase();
+        faqItems.forEach(item => {
+          const questionText = item.querySelector('.faq-question').textContent.toLowerCase();
+          if (questionText.includes(query)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
+</content>
+</create_file>

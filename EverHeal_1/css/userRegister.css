@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg img {
+    width: 100%;
+    height: 110rem;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.ls {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    height: 23vh;
+}
+
+.lss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 29rem;
+}
+
+.logo .h1 {
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.docserch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.docserch input,
+.docserch button {
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.docserch input {
+    width: 450px;
+    background-color: transparent;
+}
+
+.docserch input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.docserch button {
+    width: 25%;
+    background-color: transparent;
+    color: black;
+}
+
+.docserch button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navigation ul li {
+    list-style: none;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.navigation ul li:hover {
+    color: rgb(40, 40, 40);
+    border-color: rgb(40, 40, 40);
+    transform: translateY(-5px);
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    font-size: 34px;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a.active {
+    color: rgb(40, 40, 40);
+}
+
+.signup {
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    /* background-color: rosybrown; */
+}
+
+.content form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    /* background-color: white; */
+}
+
+
+.content form button {
+    width: 100%;
+    height: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.content form input:focus,
+.content form button:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content form button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content form button:active {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+.imp1, .imp6 {
+    grid-column: 1 / 3;
+    /* background-color: lightblue; */
+    padding: 20px;
+    text-align: center;
+}
+
+.imp2, .imp4, .imp5 {
+    padding: 30px;
+    text-align: center;
+}
+
+.imp2 {
+    /* background-color: lightgreen; */
+    grid-column: 1 / 2;
+}
+.imp3 {
+    /* background-color: lightcoral; */
+    grid-column: 2 / 3;
+}
+
+.imp4 {
+    /* background-color: lightgoldenrodyellow; */
+    grid-column: 1 / 2;
+}
+
+.imp5 {
+    /* background-color: lightpink; */
+    grid-column: 2 / 3;
+}
+
+.imp6 {
+    /* background-color: lightgray; */
+}
+
+/* .imp1, .imp2, .imp3, .imp4, .imp5, .imp6 {
+    max-height: 250rem;
+} */
+/* Base styles for input and label */
+.input-wrapper {
+    position: relative;
+    /* margin-bottom: 10px; */
+}
+
+.input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: 0rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: rgb(40, 40, 40);
+}
+
+/* Styling for label */
+
+.input:focus + label {
+    color: rgb(40, 40, 40);
+}
+
+/* Prevent the label from overlapping input */
+.input:focus::placeholder {
+    color: transparent;
+}
+
+/* Adjust for other divs with inputs */
+.imp1 .input-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* General Styling for Input and Select Fields */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.input:focus,
+.input:valid {
+    outline: none;
+    border-color: #007bff;
+}
+
+label{
+    position: absolute;
+    top: 22px;
+    left: 25px;
+    color: #aaa;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+.imp2 label{
+    position: absolute;
+    top: 7px;
+    left: 25px;
+    color: #aaa;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+.imp3 label{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: #aaa;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+.imp5 label{
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    color: #aaa;
+    font-size: 1.4rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+
+/* Floating Label Effect */
+.input:focus + label,
+.input:valid + label {
+    top: -20px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.imp2 .input:focus + label,
+.input:valid + label {
+    top: -30px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.imp3 .input:focus + label,
+.input:valid + label {
+    top: -30px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.imp5 .input:focus + label,
+.input:valid + label {
+    top: -35px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.dobb{
+    position: absolute;
+    top: -1.8rem;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.uyp{
+    position: absolute;
+    top: -1.5rem;
+    /* font-size: 1.5rem; */
+    color: #007bff;
+}
+
+/* Styling for Select Elements */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+select:focus,
+select:valid {
+    outline: none;
+    border-color: #007bff;
+}
+
+select + label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+/* Floating label for select */
+select:focus + label,
+select:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Adjust Layout for Form Elements */
+.imp3,
+.imp4,
+.imp5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+}
+.imp2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.imp3 .input-wrapper,
+.imp4 .input-wrapper,
+.imp5 .input-wrapper {
+    position: relative;
+}
+/* For Single Column Layout on Smaller Screens */
+#other-things-input{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 50rem;
+    height: 5rem;
+}
+.imp1,.imp2,.imp3,.imp4,.imp5,.imp6{
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.submitBtn{
+    position: absolute;
+    bottom: -5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem ;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    border: 1px solid rgb(40, 40, 40);
+    /* outline: none; */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.signup h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#other-things-input {
+    border-radius: 22px;
+}

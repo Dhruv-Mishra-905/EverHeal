@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <title>User_Login</title>
+</head>
+<body>
+    <div class="bg">
+        <img src="img/login.jpg" alt="login" class="bg">
+    </div>
+    <header>
+        <div class="ls">
+            <div class="lss">
+            <div class="logo">
+                <h1 class="h1">EverHeal</h1>
+            </div>
+            <div class="docserch">
+                <input type="search" name="" placeholder="Search here" class="docsrch">
+                <button class="docbtn">Search</button>
+            </div>
+        </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="FindDoctor.html">Find Doctor</a></li>
+                    <li><a href="FindHospital.html">Find Hospital</a></li>
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Your Query</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="login">
+        <div class="content">
+            <h1>User Login</h1>
+            <form action="userLogin.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Enter your User Name" id="username" required>
+                <br>
+                <label for="password" >Password:</label>
+                <input type="password" name="password" id="password"  placeholder="Enter your password here" required>
+                <br>
+            </form>
+            <input type="submit" value="Login" class="loginbtn">
+            <a href="register.html" class="Register" target="_blank">Register</a>
+        </div>
+    </div>
+</body>
+</html>

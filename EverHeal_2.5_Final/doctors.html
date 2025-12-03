@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doctors.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Doctors</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="logo animate">
+            <img src="img/logo.png" alt="EverHeal Logo">
+        </div>
+
+        <nav class="navList animate">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#medical">Store</a></li>
+            </ul>
+        </nav>
+
+        <div class="account animate">
+            <a href="#">Help</a>
+            <a href="login.html" target="_blank"><i class="fa fa-user"></i></a>
+        </div>
+    </header>
+
+
+
+
+    <section id="doctors">
+        <div class="head">
+            <div class="name">
+                <h2>Doctors</h2>
+                <p>Find the best doctors in your area.</p>
+            </div>
+
+            <div class="search-container animate">
+                <input type="text" placeholder="Search doctor by name or location" class="search animate">
+                <button class="search-button animate"><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="location">
+                <a href="#location">
+                    <h3><i class="fa fa-map-marker-alt"></i> <span>Ranchi</span></h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="specialties" class="specialties-section">
+        <h2>Browse by Specialties</h2>
+        <div class="specialties-grid">
+
+            <div class="specialty-card">
+                <img src="img/specialties/general.png" alt="General Physician">
+                <p>General Physician</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/dermatology.png" alt="Dermatology">
+                <p>Dermatology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/gynaecology.png" alt="Obstetrics & Gynaecology">
+                <p>Obstetrics & Gynaecology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/orthopaedics.png" alt="Orthopaedics">
+                <p>Orthopaedics</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/ent.png" alt="ENT">
+                <p>ENT</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/neurology.png" alt="Neurology">
+                <p>Neurology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/cardiology.png" alt="Cardiology">
+                <p>Cardiology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/urology.png" alt="Urology">
+                <p>Urology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/gastro.png" alt="Gastroenterology">
+                <p>Gastroenterology</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/psychiatry.png" alt="Psychiatry">
+                <p>Psychiatry</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/paediatrics.png" alt="Paediatrics">
+                <p>Paediatrics</p>
+            </div>
+
+            <div class="specialty-card">
+                <img src="img/specialties/pulmonology.png" alt="Pulmonology">
+                <p>Pulmonology</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="doctor-search">
+        <h2>Find a Doctor in 3 easy steps</h2>
+        <div class="wrap">
+            <form class="doctor-search-form">
+                <div class="form-group">
+                    <label for="speciality">Select Speciality<span class="required">*</span></label>
+                    <select id="speciality" name="speciality" class="form-control">
+                        <option value="" disabled selected>Enter Speciality</option>
+                        <option value="general">General Physician</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="orthopaedics">Orthopaedics</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="paediatrics">Paediatrics</option>
+                        <option value="psychiatry">Psychiatry</option>
+                        <option value="gynaecology">Obstetrics & Gynaecology</option>
+                        <option value="pulmonology">Pulmonology</option>
+                        <option value="ent">ENT</option>
+                        <option value="urology">Urology</option>
+                        <option value="gastroenterology">Gastroenterology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">Select Date<span class="required">*</span></label>
+                    <input type="date" id="appointment-date" name="appointment-date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="location">Preferred Location/Pincode<span class="required">*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-dot left-icon"></i>
+                        <input type="text" id="location" name="location" placeholder="Search location"
+                            class="form-control">
+                        <i class="fa-solid fa-crosshairs right-icon"></i>
+                    </div>
+                </div>
+                <div class="form-group submit">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+        </div>
+
+        </form>
+    </section>
+
+
+
+    <section class="doctor-list" id="results-info">
+        <div class="doctor-list-container animate">
+            <div class="doctor-card animate" data-specialty="General Physician">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Rajiv Kumar"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Rajiv Kumar</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>General Physician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="General Physician">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Suman Mehra"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Suman Mehra</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>General Physician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="General Physician">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Pooja Singh"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Pooja Singh</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>General Physician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="General Physician">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Amit Rao"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Amit Rao</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>General Physician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Dermatology (4) -->
+            <div class="doctor-card animate" data-specialty="Dermatology">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Neha Verma"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Neha Verma</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Dermatologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Dermatology">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Karan Patel"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Karan Patel</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Dermatologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Dermatology">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Saira Khan"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Saira Khan</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Dermatologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Dermatology">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Vikram Joshi"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Vikram Joshi</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Dermatologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Cardiology (4) -->
+            <div class="doctor-card animate" data-specialty="Cardiology">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Himanshu Kumar"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Himanshu Kumar</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Cardiologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Cardiology">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Rakesh Sharma"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Rakesh Sharma</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Cardiologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Cardiology">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Meenakshi Iyer"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Meenakshi Iyer</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Cardiologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Cardiology">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Arjun Desai"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Arjun Desai</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Cardiologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Orthopaedics (4) -->
+            <div class="doctor-card animate" data-specialty="Orthopaedics">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Rajesh Gupta"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Rajesh Gupta</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Orthopedic Surgeon</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Orthopaedics">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Naveen Yadav"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Naveen Yadav</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Orthopedic Surgeon</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Orthopaedics">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Sunil Bhatia"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Sunil Bhatia</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Orthopedic Surgeon</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Orthopaedics">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Kavita Nair"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Kavita Nair</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Orthopedic Surgeon</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Neurology (4) -->
+            <div class="doctor-card animate" data-specialty="Neurology">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Abhimanyu Gupta"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Abhimanyu Gupta</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Neurologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Neurology">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Priya Sethi"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Priya Sethi</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Neurologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Neurology">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Anoop Varma"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Anoop Varma</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Neurologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Neurology">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Leena Choudhary"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Leena Choudhary</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Neurologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Paediatrics (4) -->
+            <div class="doctor-card animate" data-specialty="Paediatrics">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Shankar Bauri"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Shankar Bauri</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pediatrician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Paediatrics">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Anjali Verma"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Anjali Verma</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pediatrician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Paediatrics">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. K. Reddy"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. K. Reddy</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pediatrician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Paediatrics">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Mitali Bose"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Mitali Bose</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pediatrician</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Psychiatry (4) -->
+            <div class="doctor-card animate" data-specialty="Psychiatry">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Suresh Kumar"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Suresh Kumar</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Psychiatrist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Psychiatry">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Ananya Roy"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Ananya Roy</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Psychiatrist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Psychiatry">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Vikash Singh"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Vikash Singh</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Psychiatrist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Psychiatry">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Ritu Kapoor"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Ritu Kapoor</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Psychiatrist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Obstetrics & Gynaecology (4) -->
+            <div class="doctor-card animate" data-specialty="Obstetrics & Gynaecology">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Mira Prajapati"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Mira Prajapati</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Obstetrician & Gynaecologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Obstetrics & Gynaecology">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Priyanka Das"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Priyanka Das</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Obstetrician & Gynaecologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Obstetrics & Gynaecology">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Smita Joshi"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Smita Joshi</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Obstetrician & Gynaecologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Obstetrics & Gynaecology">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Neelam Gupta"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Neelam Gupta</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Obstetrician & Gynaecologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Pulmonology (4) -->
+            <div class="doctor-card animate" data-specialty="Pulmonology">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. N. Madhav Mishra"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. N. Madhav Mishra</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pulmonologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Pulmonology">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Harish Rao"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Harish Rao</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pulmonologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Pulmonology">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Kavya Menon"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Kavya Menon</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pulmonologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Pulmonology">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Tahir Qureshi"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Tahir Qureshi</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Pulmonologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- ENT (4) -->
+            <div class="doctor-card animate" data-specialty="ENT">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Varun Malhotra"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Varun Malhotra</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>ENT Specialist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="ENT">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Sheetal Jain"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Sheetal Jain</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>ENT Specialist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="ENT">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Mohit Grover"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Mohit Grover</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>ENT Specialist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="ENT">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Ramesh Pal"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Ramesh Pal</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>ENT Specialist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Urology (4) -->
+            <div class="doctor-card animate" data-specialty="Urology">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Pradeep Kumar"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Pradeep Kumar</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Urologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Urology">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Sunita Lal"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Sunita Lal</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Urologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Urology">
+                <div class="doctor-img animate"><img src="img/doc-2.jpg" alt="Dr. Rohan Bhat"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Rohan Bhat</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Urologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Harmu Housing Colony, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Urology">
+                <div class="doctor-img animate"><img src="img/doc-3.jpg" alt="Dr. Milind Shah"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Milind Shah</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Urologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Lalpur Circular Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+
+            <!-- Gastroenterology (4) -->
+            <div class="doctor-card animate" data-specialty="Gastroenterology">
+                <div class="doctor-img animate"><img src="img/doc-4.jpg" alt="Dr. Rajendra Tiwari"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Rajendra Tiwari</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Gastroenterologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Kanke Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Gastroenterology">
+                <div class="doctor-img animate"><img src="img/doc-5.jpg" alt="Dr. Asha Nair"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Asha Nair</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Gastroenterologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Doranda Airport Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Gastroenterology">
+                <div class="doctor-img animate"><img src="img/doc-6.jpg" alt="Dr. Devendra Singh"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Devendra Singh</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Gastroenterologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Morabadi Sports Complex, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i
+                        class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+            <div class="doctor-card animate" data-specialty="Gastroenterology">
+                <div class="doctor-img animate"><img src="img/doc-1.jpg" alt="Dr. Neetu Chawla"></div>
+                <div class="doctor-name animate">
+                    <h3>Dr. Neetu Chawla</h3>
+                </div>
+                <div class="doctor-profession animate">
+                    <h4>Gastroenterologist</h4>
+                </div>
+                <div class="doctor-location animate">
+                    <h4>Location: Bariatu Main Road, Ranchi, Jharkhand</h4>
+                </div>
+                <div class="rating animate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                <div class="doctor-button animate"><input type="button" value="Book Appointment"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+<script src="doc.js"></script>
+ 
+
+
+</body>
+
+</html>

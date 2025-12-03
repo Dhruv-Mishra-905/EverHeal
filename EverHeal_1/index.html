@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="website icon" type="png" href="img/webicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <title>simpleHospital</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logoimg">
+            <img src="img/logo.png" alt="" class="log">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="FindDoctor.html" target="_blank">Find Doctor</a></li>
+                <li><a href="FindHospital.html" target="_blank">Find Hospital</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Your Query</a></li>
+            </ul>
+            <div class="dropbox">
+                <label for="dropbox">
+                    <select name="dropbox" id="Box" onchange="openPage()">
+                        <option value="none" selected disabled hidden>Log in as</option>
+                        <option value="userLogin.html" >Log In as User</option>
+                        <option value="Staff">Log In as Staff</option>
+                        <option value="Doctor">Log In as Doctor</option>
+                        <option value="hospitalLogin.html">Log In as Hospital</option>
+                        <option value="userRegister.html"> New : Sign In</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="search">
+            <div class="more">
+                <ul>
+                    <li><a href="#">Certificates</a></li>
+                    <li><a href="#">Prescription</a></li>
+                    <li><a href="#">Recipts</a></li>
+                    <li><a href="#">Chat with us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <input type="search" name="" placeholder="Search here..." class="srch">
+        </div>
+    </div>
+    <div class="body1">
+        <img class="st" src="img/1.jpg" alt="">
+    </div>
+    <h3 class="slogn">Bringing healthcare to your fingertips—affordable, accessible, and effortless, because your well-being matters most</h3>
+    <div class="body2">
+        <div class="cont">
+            <img src="img/FindDoc.jpg" alt="Doctor" class="box-img">
+            <p class="box-desc">We have best doctors form India</p>
+        </div>
+        <div class="cont">
+            <img src="img/loc.jpg" alt="Location" class="box-img">
+            <p class="box-desc">Find our 100+ Hospital Location</p>
+        </div>
+        <div class="cont">
+            <img src="img/appointments.jpg" alt="Appointment" class="box-img">
+            <p class="box-desc">Book Appointment Physical or Virtual</p>
+        </div>
+        <div class="body3">
+            <button class="btn"><a href="FindDoctor.html" target="_blank">Find Doctor</a></button>
+            <button class="btn" class="cc"><a href="FindHospital.html" target="_blank">Find Hospital</a></button>
+            <button class="btn"><a href="#">Book Appointment</a></button>
+        </div>
+    </div>
+    <div class="body4">
+        <div class="cnt1"><h2><a href="#">simpleLibrary</a></h2></div>
+        <div class="cnt2">
+            <ul>
+                <li><a href="#"><u> Body Systems & Organs </u></a></li>
+                <li><a href="#"><u> Diseases & Conditions </u></a></li>
+                <li><a href="#"><u> Treatments </u></a></li>
+                <li><a href="#"><u> Procedures </u></a></li>
+                <li><a href="#"><u> Drugs, Devices & Supplements </u></a></li>
+                <li><a href="#"><u> Diagnostics & Testing </u></a></li>
+                <li><a href="#"><u> Symptoms </u></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="why">
+        <h1 class="whyhd">Why you use simpleHospital ?</h1>
+        <div class="whycnt">
+            <h1>Seamless Doctor Appointments</h1>
+            <p>Skip the hassle—book your preferred doctor in seconds, no waiting, no worries.</p>
+        </div>
+        <div class="whycnt">
+            <h1>Instant Hospital Bed Booking</h1>
+            <p>Locate and secure hospital beds near you in emergencies with just a few clicks.</p>
+        </div>
+        <div class="whycnt">
+            <h1>Expert Virtual Consultations</h1>
+            <p>Chat with top-notch doctors from the comfort of your home, anytime, anywhere.</p>
+        </div>
+        
+        <div class="whycnt">
+            <h1>Unbeatable Medicine <br> Prices</h1>
+            <p>Save big with our exclusive discounts, ensuring affordable healthcare for everyone.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                simpleHospital Copyright © 2024- All rights reserved
+            </div>
+        </div>
+    </footer>
+    <div class="chat">
+        <button class="bton"><a href="#">Chat with our BOT</a></button>
+        <img src="img/bot.png" alt="" class="botimg">
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        function openPage() {
+            var selectedOption = document.getElementById("Box").value;
+            if (selectedOption) {
+                window.location.href = selectedOption; // This opens the selected HTML page
+            }
+        }
+    </script>
+</body>
+</html>

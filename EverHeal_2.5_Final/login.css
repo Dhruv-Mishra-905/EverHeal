@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg img{
+    width: 100%;
+    height: 100;
+    object-fit: cover;
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.ls{
+    /* max-width: 400px; */
+    padding: 20px;
+    /* background-color: red; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    height: 23vh;
+}
+.lss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 29rem;
+}
+.logo{
+    cursor: pointer;
+}
+.logo .h1{
+    font-size: 60px;
+}
+.docserch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+.docserch input{
+    background-color: transparent;
+    width: 450px;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+.docserch input:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.docserch button{
+    width: 25%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+    color: black;
+}
+.docserch button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;   
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.navigation ul li {
+    list-style: none;
+    border-style: solid;
+    border-color: transparent; /* Keep the border consistent */
+    border-width: 0 0 2px 0; /* Border only at the bottom */
+    transition: transform 0.3s ease-in-out,border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.navigation ul li:hover {
+    color: rgb(40, 40, 40);
+    border-color: rgb(40, 40, 40);
+    transform: translateY(-5px);
+    
+}
+.navigation ul li a{
+    text-decoration: none;
+    font-size: 34px;
+    color: inherit;
+    cursor: pointer;
+}
+.login{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 171px;
+    padding: 20px;
+}
+.content{
+    margin-top: 150px;
+    position: absolute;
+    width: 50%;
+    height: 86%;
+    background-color: rgba(255, 255, 255, 0.344);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center;     /* Center items horizontally */
+    text-align: center;  
+    padding: 20px;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center;     /* Center items horizontally */
+}
+.login h1{
+    position: absolute;
+    font-size: 4.5rem;
+    top: 25px;
+    cursor: pointer;
+}
+.login form{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.login form input{
+    width: 50%;
+    height: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+.login form input:focus{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* .login form button{
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(40, 40, 40);
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgb(40, 40, 40);
+    color: white;
+} */
+/* .login form button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+} */
+.login form a{
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+}
+.login form a:hover{
+    color: rgb(0, 0, 0);
+}
+.loginbtn{
+    position: absolute;
+    background-color: #fff;
+    cursor: pointer;
+    top: 27rem;
+    width: 25%;
+    height: 3.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    transform: 0.3s ease-in-out;
+}
+.loginbtn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.loginbtn:active{
+    transform: scale(0.9);
+}
+.loginbtn:focus{
+    outline: none;
+}
+.Register{
+    position: absolute;
+    cursor: pointer;
+    top: 33rem;
+    width: 25%;
+    height: 4rem;
+    font-size: 2rem;
+    transform: 0.3s ease-in-out;
+    /* text-decoration: none; */
+    color: #000;
+}
+.Register:hover{
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
