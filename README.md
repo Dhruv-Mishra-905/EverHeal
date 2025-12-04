@@ -55,7 +55,9 @@ How to Use
 
 1. Download or clone the repository
 
-git clone https://github.com/Dhruv-Mishra-905/EverHeal/blob/main/README.md
+git clone 
+
+https://github.com/Dhruv-Mishra-905/EverHeal/tree/main/EverHeal_2.5_Final
 
 
 2. Open index.html in your browser
