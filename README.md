@@ -55,7 +55,7 @@ How to Use
 
 1. Download or clone the repository
 
-git clone https://github.com/yourusername/EverHeal.git
+git clone https://github.com/Dhruv-Mishra-905/EverHeal/blob/main/README.md
 
 
 2. Open index.html in your browser
@@ -68,11 +68,9 @@ git clone https://github.com/yourusername/EverHeal.git
 
 ---
 
-Live Demo
+Live Demo :
 
-(Add your link after hosting)
-
-https://yourusername.github.io/EverHeal/
+https://everheal.netlify.app/
 
 
 ---
